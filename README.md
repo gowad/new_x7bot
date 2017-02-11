@@ -1,4 +1,4 @@
-# [ZAZA](https://telegram.me/c9_pro)
+# [devil3_bot](https://telegram.me/c9_pro)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
@@ -13,27 +13,19 @@
 
 **You can use "#", "!", or "/" to begin all commands
 
+
+###A NEW BOT IN TELEGREM AND THE BEST
 * * *
 
-# Installation
+# التنصيب
 
-```sh
-# Let's install the bot.
-cd $HOME
-git clone https://github.com/Jozef12/newzaza.git
-cd newzaza
-chmod +x beyond.sh
-./zaza.sh install
-./zaza.sh # Enter a phone number & confirmation code.
-```
-### One command
-To install everything in one command, use:
-```sh
-cd $HOME && git clone https://github.com/Jozef12/newzaza.git && cd newzaza && chmod +x zaza.sh && ./zaza.sh install && ./zaza.sh
-```
+git clone https://github.com/Jozef12/devil3.git
+cd devil3
+chmod +x devil3.sh
+./devil3.sh install
+./devil3.sh # Enter a phone number & confirmation cod
 
-* * *
-
+###ملاح   . 
 ### Sudo And Bot
 After you run the bot for first time, send it `!id`. Get your ID and stop the bot.
 
