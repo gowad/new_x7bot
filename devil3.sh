@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/newzaza
+cd $HOME/devil3
 
 install() {
 	    cd tg
@@ -67,8 +67,8 @@ fi
 #  --permanent-peer-ids                 use permanent peer ids
 #			#			#			#			#			#			#			#			#			#
 #Example To launch with second profile :
-# ./beyond.sh -p second-profile
+# ./devil3.sh -p second-profile
 
 #			  OR
 
-# ./beyond.sh --profile second-profile
+# ./devil3.sh --profile second-profile
