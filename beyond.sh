@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/BDReborn
+cd $HOME/newzaza
 
 install() {
 	    cd tg
