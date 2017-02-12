@@ -1,3 +1,4 @@
+
 local function pre_process(msg)
 chat = msg.chat_id_
 user = msg.sender_user_id_
@@ -755,8 +756,8 @@ return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, '💡¦ _العضو_ [ '..mat
     }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="unsilent"})
       end
    end
-		if matches[1]:lower() == 'clean' matches[1]:lower() == 'مسح' and is_owner(msg) then
-			if matches[2] == 'bans' ormatches[2] == 'قائمة الحظر' then
+		if matches[1]:lower() == 'clean' or matches[1]:lower() == 'مسح' and is_owner(msg) then
+			if matches[2] == 'bans' or matches[2] == 'قائمة الحظر' then
 				if next(data[tostring(chat)]['banned']) == nil then
      if not lang then
 					return "💡¦ *No banned users in this group* ❌"
@@ -774,7 +775,7 @@ return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, '💡¦ _العضو_ [ '..mat
 				return "💡¦ _ تم حذف جميع المحظورين_ ✔"
            end
 			end
-			if matches[2] == 'silentlist' matches[2] == 'قائمة المكتومين' then
+			if matches[2] == 'silentlist' or matches[2] == 'قائمة المكتومين' then
 				if next(data[tostring(chat)]['is_silent_users']) == nil then
         if not lang then
 					return "💡¦ *No silent users in this group*"
