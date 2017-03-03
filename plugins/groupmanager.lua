@@ -663,7 +663,7 @@ if lock_tag == "yes" then
 if not lang then
 return "🎵 *Tag Posting Is Already Locked* ✔"
 elseif lang then
-return ' \n🎵 _التاك(#) بلفعل مقفول_ ✔'
+return ' \n🎵 _اليوزر (@) بلفعل مقفول_ ✔'
 end
 else
  data[tostring(target)]["settings"]["lock_tag"] = "yes"
@@ -671,7 +671,7 @@ save_data(_config.moderation.data, data)
 if not lang then
 return "🎵 *Tag Posting Has Been Locked* ✔"
 else
-return ' \n🎵 _تم قفل التاك(#)_ ✔'
+return ' \n🎵 _تم قفل اليوزر(@)_ ✔'
 end
 end
 end
@@ -692,14 +692,14 @@ local lock_tag = data[tostring(target)]["settings"]["lock_tag"]
 if not lang then
 return "🎵 *Tag Posting Is Already unlocked* ❌"
 elseif lang then
-return ' \n🎵 _التاك(#) بلفعل مفتوحة_ ❌'
+return ' \n🎵 _اليوزر(@) بلفعل مفتوحة_ ❌'
 end
 else 
 data[tostring(target)]["settings"]["lock_tag"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "🎵 *Tag Posting Has Been unlocked* ❌"
 else
-return ' \n🎵 _تم فتح التاك(#)_ ❌'
+return ' \n🎵 _تم فتح اليوزر(@)_ ❌'
 end
 end
 end
@@ -2353,21 +2353,21 @@ tdcli_function ({
       end
    end
 
-if matches[1] == "lock" or matches[1] == "قفل" and is_mod(msg) then
+if matches[1] == "n" or matches[1] == "قفل" and is_mod(msg) then
 local target = msg.chat_id_
-if matches[2] == "link" or matches[2] == "الروابط" then
+if matches[2] == "lin" or matches[2] == "الروابط" then
 return lock_link(msg, data, target)
 end
-if matches[2] == "tag" or matches[2] == "اليوزر" then
+if matches[2] == "user" or matches[2] == "اليوزر" then
 return lock_tag(msg, data, target)
 end
 if matches[2] == "mention" then
 return lock_mention(msg, data, target)
 end
-if matches[2] == "arabic" or matches[2] == "العربية" then
+if matches[2] == "ar" or matches[2] == "العربية" then
 return lock_arabic(msg, data, target)
 end
-if matches[2] == "edit" or matches[2] == "التعديل" then
+if matches[2] == "ed" or matches[2] == "التعديل" then
 return lock_edit(msg, data, target)
 end
 if matches[2] == "spam" or matches[2] == "الكلايش" then
@@ -2379,7 +2379,7 @@ end
 if matches[2] == "bots" or matches[2] == "البوتات" then
 return lock_bots(msg, data, target)
 end
-if matches[2] == "markdown" or matches[2] == "الماركدوان" then
+if matches[2] == "mar" or matches[2] == "الماركدوان" then
 return lock_markdown(msg, data, target)
 end
 if matches[2] == "webpage" or matches[2] == "الاعلانات"then
@@ -2387,21 +2387,21 @@ return lock_webpage(msg, data, target)
 end
 end
 
-if matches[1] == "unlock" or matches[1] == "فتح" and is_mod(msg) then
+if matches[1] == "un" or matches[1] == "فتح" and is_mod(msg) then
 local target = msg.chat_id_
-if matches[2] == "link" or matches[2] == "الروابط" then
+if matches[2] == "lin" or matches[2] == "الروابط" then
 return unlock_link(msg, data, target)
 end
-if matches[2] == "tag" or matches[2] == "اليوزر" then
+if matches[2] == "user" or matches[2] == "اليوزر" then
 return unlock_tag(msg, data, target)
 end
 if matches[2] == "mention" then
 return unlock_mention(msg, data, target)
 end
-if matches[2] == "arabic" or matches[2] == "العربية" then
+if matches[2] == "ar" or matches[2] == "العربية" then
 return unlock_arabic(msg, data, target)
 end
-if matches[2] == "edit" or matches[2] == "التعديل" then
+if matches[2] == "ed" or matches[2] == "التعديل" then
 return unlock_edit(msg, data, target)
 end
 if matches[2] == "spam" or matches[2] == "الكلايش" then
@@ -2413,14 +2413,14 @@ end
 if matches[2] == "bots" or matches[2] == "البوتات" then
 return unlock_bots(msg, data, target)
 end
-if matches[2] == "markdown" or matches[2] == "الماركدوان" then
+if matches[2] == "mar" or matches[2] == "الماركدوان" then
 return unlock_markdown(msg, data, target)
 end
 if matches[2] == "webpage" or matches[2] == "الاعلانات"then
 return unlock_webpage(msg, data, target)
 end
 end
-if matches[1] == "lock" or matches[1] == "قفل" and is_mod(msg) then
+if matches[1] == "n" or matches[1] == "قفل" and is_mod(msg) then
 local target = msg.chat_id_
 if matches[2] == "all" or matches[2] == "الدردشه" then
 return mute_all(msg, data, target)
@@ -2428,28 +2428,28 @@ end
 if matches[2] == "gif" or matches[2] == "المتحركه" then
 return mute_gif(msg, data, target)
 end
-if matches[2] == "text" or matches[2] == "النص" then
+if matches[2] == "txt" or matches[2] == "النص" then
 return mute_text(msg ,data, target)
 end
-if matches[2] == "photo" or matches[2] == "الصور" then
+if matches[2] == "pho" or matches[2] == "الصور" then
 return mute_photo(msg ,data, target)
 end
-if matches[2] == "video" or matches[2] == "الفيديو" then
+if matches[2] == "vid" or matches[2] == "الفيديو" then
 return mute_video(msg ,data, target)
 end
-if matches[2] == "audio" or matches[2] == "الصوت" then
+if matches[2] == "aud" or matches[2] == "الصوت" then
 return mute_audio(msg ,data, target)
 end
-if matches[2] == "voice" or matches[2] == "البصمات" then
+if matches[2] == "voi" or matches[2] == "البصمات" then
 return mute_voice(msg ,data, target)
 end
-if matches[2] == "sticker" or matches[2] == "الملصقات" then
+if matches[2] == "stk" or matches[2] == "الملصقات" then
 return mute_sticker(msg ,data, target)
 end
 if matches[2] == "contact" or matches[2] == "جهات الاتصال" then
 return mute_contact(msg ,data, target)
 end
-if matches[2] == "forward" or matches[2] == "التوجيه" then
+if matches[2] == "fwd" or matches[2] == "التوجيه" then
 return mute_forward(msg ,data, target)
 end
 if matches[2] == "location" or matches[2] == "الموقع" then
@@ -2461,7 +2461,7 @@ end
 if matches[2] == "tgservice" or matches[2] == "الخدمة" then
 return mute_tgservice(msg ,data, target)
 end
-if matches[2] == "inline" or matches[2] == "النلاين" then
+if matches[2] == "inl" or matches[2] == "النلاين" then
 return mute_inline(msg ,data, target)
 end
 if matches[2] == "game" or matches[2] == "الالعاب" then
@@ -2469,7 +2469,7 @@ return mute_game(msg ,data, target)
 end
 end
 
-if matches[1] == "unlock" or matches[1] == "فتح" and is_mod(msg) then
+if matches[1] == "un" or matches[1] == "فتح" and is_mod(msg) then
 local target = msg.chat_id_
 if matches[2] == "all" or matches[2] == "الدردشة" then
 return unmute_all(msg, data, target)
@@ -2477,19 +2477,19 @@ end
 if matches[2] == "gif" or matches[2] == "المتحركة" then
 return unmute_gif(msg, data, target)
 end
-if matches[2] == "text" or matches[2] == "النص" then
+if matches[2] == "txt" or matches[2] == "النص" then
 return unmute_text(msg, data, target)
 end
-if matches[2] == "photo" or matches[2] == "الصور" then
+if matches[2] == "pho" or matches[2] == "الصور" then
 return unmute_photo(msg ,data, target)
 end
-if matches[2] == "video" or matches[2] == "الفيديو" then
+if matches[2] == "vid" or matches[2] == "الفيديو" then
 return unmute_video(msg ,data, target)
 end
-if matches[2] == "audio" or matches[2] == "الصوت" then
+if matches[2] == "aud" or matches[2] == "الصوت" then
 return unmute_audio(msg ,data, target)
 end
-if matches[2] == "voice" or matches[2] == "البصمات" then
+if matches[2] == "voi" or matches[2] == "البصمات" then
 return unmute_voice(msg ,data, target)
 end
 if matches[2] == "sticker" or matches[2] == "الملصقات" then
@@ -2498,7 +2498,7 @@ end
 if matches[2] == "contact" or matches[2] == "جهات الاتصال" then
 return unmute_contact(msg ,data, target)
 end
-if matches[2] == "forward" or matches[2] == "التوجيه" then
+if matches[2] == "fwd" or matches[2] == "التوجيه" then
 return unmute_forward(msg ,data, target)
 end
 if matches[2] == "location" or matches[2] == "الموقع" then
@@ -2510,7 +2510,7 @@ end
 if matches[2] == "tgservice" or matches[2] == "الخدمة" then
 return unmute_tgservice(msg ,data, target)
 end
-if matches[2] == "inline" or matches[2] == "النلاين" then
+if matches[2] == "inl" or matches[2] == "النلاين" then
 return unmute_inline(msg ,data, target)
 end
 if matches[2] == "game" or matches[2] == "الالعاب" then
@@ -3130,15 +3130,15 @@ patterns ={
 "^(المدراء)$",
 "^(الادمنية)$",
 "^[!/#](ownerlist)$",
-"^[!/#](lock) (.*)$",
-"^[!/#](unlock) (.*)$",
+"^[!/#](n) (.*)$",
+"^[!/#](un) (.*)$",
 "^(فتح) (.*)$",
 "^(قفل) (.*)$",
 "^[!/#](settings)$",
 "^(الاعدادات)$",
 --"^[!/#](mutelist)$",
-"^[!/#](lock) (.*)$",
-"^[!/#](unlock) (.*)$",
+"^[!/#](n) (.*)$",
+"^[!/#](un) (.*)$",
 "^(فتح) (.*)$",
 "^(قفل) (.*)$",
 "^[!/#](link)$",
