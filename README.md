@@ -47,8 +47,6 @@ Then restart the bot.
 
 [جوكر بغداد](https://telegram.me/dev_iraq1)
 
-([Jozef3](https://telegram.me/@Jozef3))
-
 
 ### Our Telegram channel:
 
