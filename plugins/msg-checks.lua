@@ -204,9 +204,10 @@ kick_user(user, chat)
     end
   end
 end
-if msg.forward_info_ and mute_forward == "yes" then
+if msg.forward_info_ and mute_forward == "yes" then			
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
+tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "ممنوع التوجيه \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat)
     end
@@ -346,6 +347,7 @@ end
 if mute_all == "yes" then 
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
+tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "المجموعه في وضع الصامت \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat)
    end
