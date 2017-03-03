@@ -1,4 +1,4 @@
-# [devil3_bot](https://telegram.me/c9_pro)
+# [x7bot](https://telegram.me/bothu)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
@@ -19,13 +19,13 @@
 
 # التنصيب
 
-git clone https://github.com/Jozef12/devil3.git
+git clone https://github.com/x7hh/new_x7bot.git
 cd devil3
 chmod +x devil3.sh
 ./devil3.sh install
 ./devil3.sh # Enter a phone number & confirmation cod
 
-###ملاح   . 
+###ملاحظة   . 
 ### Sudo And Bot
 After you run the bot for first time, send it `!id`. Get your ID and stop the bot.
 
@@ -45,11 +45,11 @@ Then restart the bot.
 
 # Developers!
 
-[wounds country](https://telegram.me/mmff1)
+[جوكر بغداد](https://telegram.me/dev_iraq1)
 
 ([Jozef3](https://telegram.me/@Jozef3))
 
 
 ### Our Telegram channel:
 
-[DEV ZAZA](https://telegram.me/C9_pro)
+[x7 chaneel](https://telegram.me/bothu)
