@@ -20,10 +20,10 @@
 # التنصيب
 
 git clone https://github.com/x7hh/new_x7bot.git
-cd devil3
-chmod +x devil3.sh
-./devil3.sh install
-./devil3.sh # Enter a phone number & confirmation cod
+cd x7bot
+chmod +x x7bot.sh
+./x7bot.sh install
+./x7bot.sh # Enter a phone number & confirmation cod
 
 ###ملاحظة   . 
 ### Sudo And Bot
