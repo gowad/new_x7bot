@@ -1,8 +1,8 @@
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
-our_id = 265541133 -- Put Here Your Bot ID
---ایدی رباتتونو اینجا بزارید
+our_id = 275357404 -- Put Here Your Bot ID
+--حط ايدي بوتك
 URL = require "socket.url"
 http = require "socket.http"
 https = require "ssl.https"
@@ -82,38 +82,26 @@ function create_config( )
     "groupmanager",
     "msg-checks",
     "plugins",
-    "tools"
+    "tools",
+    "me",
+    "pohot",
+    "replay",			
  },
     sudo_users = {157059515},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》Beyond Reborn v1
-An advanced administration bot based on https://valtman.name/telegram-cli
-
-》https://github.com/BeyondTeam/BDReborn 
-
-》Admins :
-》@SoLiD ➣ Founder & Developer《
-》@Makan ➣ Developer《
-》@Rixel ➣ Developer 《
-》@Exacute ➣ Developer《
-》@CiveY ➣ Developer
-》@ArmanDev ➣ Manager《
-》@MrPars ➣ Manager《
-
-》Special thanks to :
-》@Vysheng
-》@MrHalix
-》@K_a_I_i_I_i_n_u_x
-》@Nero_Dev
-》And Beyond Team Members
-
-》Our channel :
-》@BeyondTeam《
-
-》Our website :
-》http://BeyondTeam.ir
+    info_text = [[🔹مطورين البوت🔹      
+           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹
+           💯DeV : @AhMaD_X7
+           💯DeV : @dev_iraq1
+           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹  
+  🔸بوت تواصل للمحضورين🔸
+           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹
+           💯DeV : @tawasla7mad_bot
+           💯DeV : @jokr1996_bot
+           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹
+                 B❂T x7
 ]],
   }
   serialize_to_file(config, './data/config.lua')
@@ -505,7 +493,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'البوت غير مفعل 🚫'
    end
   end
   -- determine if table is empty
@@ -513,13 +501,13 @@ else
      if not lang then
 					return "_No_ *banned* _users in this group_"
    else
-					return "*هیچ کاربری از این گروه محروم نشده*"
+					return "*لايوجد محظورين في المجموعة 💡*"
               end
 				end
        if not lang then
    message = '*List of banned users :*\n'
          else
-   message = '_لیست کاربران محروم شده از گروه :_\n'
+   message = '*قائمة المحظورين في المجموعة :*\n'
      end
   for k,v in pairs(data[tostring(chat_id)]['banned']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -537,21 +525,21 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'البوت غير مفعل 🚫'
    end
   end
   -- determine if table is empty
   if next(data[tostring(chat_id)]['is_silent_users']) == nil then --fix way
         if not lang then
-					return "_No_ *silent* _users in this group_"
+					return "*No silent users in this group*"
    else
-					return "*لیست کاربران سایلنت شده خالی است*"
+					return "*قائمة الكتم فارغه 💡*"
              end
 				end
       if not lang then
    message = '*List of silent users :*\n'
        else
-   message = '_لیست کاربران سایلنت شده :_\n'
+   message = '_قائمة المكتومين :_\n'
     end
   for k,v in pairs(data[tostring(chat_id)]['is_silent_users']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -573,13 +561,13 @@ local lang = redis:get(hash)
     if not lang then
 					return "_No_ *globally banned* _users available_"
    else
-					return "*هیچ کاربری از گروه های ربات محروم نشده*"
+					return "*قائمة الحظر العام فارغه 🚫💡*"
              end
 				end
         if not lang then
    message = '*List of globally banned users :*\n'
    else
-   message = '_لیست کاربران محروم شده از گروه های ربات :_\n'
+   message = '_قائمة الحظر العام_\n'
    end
   for k,v in pairs(data['gban_users']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -600,15 +588,15 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'البوت غير مفعل 🚫'
    end
   end
   -- determine if table is empty
   if next(data[tostring(msg.chat_id_)]['filterlist']) == nil then --fix way
       if not lang then
-    return "*Filtered words list* _is empty_"
+    return "*Filtered words list is empty*"
       else
-    return "_لیست کلمات فیلتر شده خالی است_"
+    return "*قائمة الكلمات الممنوعة فارغه* 💡"
      end
   end
   if not data[tostring(msg.chat_id_)]['filterlist'] then
@@ -618,7 +606,7 @@ else
       if not lang then
        filterlist = '*List of filtered words :*\n'
          else
-       filterlist = '_لیست کلمات فیلتر شده :_\n'
+       filterlist = '* قائمة الكلمات الممنوعة : *\n'
     end
  local i = 1
    for k,v in pairs(data[tostring(msg.chat_id_)]['filterlist']) do
