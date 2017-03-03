@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/devil3
+cd $HOME/x7bot
 
 install() {
 	    cd tg
@@ -67,8 +67,8 @@ fi
 #  --permanent-peer-ids                 use permanent peer ids
 #			#			#			#			#			#			#			#			#			#
 #Example To launch with second profile :
-# ./devil3.sh -p second-profile
+# ./x7bot.sh -p second-profile
 
 #			  OR
 
-# ./devil3.sh --profile second-profile
+# ./x7bot.sh --profile second-profile
