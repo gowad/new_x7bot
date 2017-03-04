@@ -198,7 +198,6 @@ end
 if msg.edited and lock_edit == "yes" then
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
-tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "ممنوع التعديل  \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat) 
     end
@@ -207,7 +206,6 @@ end
 if msg.forward_info_ and mute_forward == "yes" then			
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
-tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "ممنوع التوجيه \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat)
     end
@@ -215,7 +213,6 @@ kick_user(user, chat)
 if msg.photo_ and mute_photo == "yes" then
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
- tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "ممنوع نشر الصور \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat)
    end
@@ -237,7 +234,6 @@ end
     if msg.sticker_ and mute_sticker == "yes" then
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
-  tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "ممنوع نشر الملصقات \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat)
    end
@@ -245,7 +241,6 @@ end
     if msg.animation_ and mute_gif == "yes" then
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
-  tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "ممنوع نشر المتحركه \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat)
    end
@@ -347,7 +342,6 @@ end
 if mute_all == "yes" then 
  if is_channel then
  del_msg(msg.chat_id_, tonumber(msg.id_))
-tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "المجموعه في وضع الصامت \n ايديك 🔚 ["..user.."]", 0, "md")
   elseif is_chat then
 kick_user(user, chat)
    end
