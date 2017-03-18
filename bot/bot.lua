@@ -1,7 +1,7 @@
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
-our_id = 275357404 -- Put Here Your Bot ID
+our_id = 251406567 -- Put Here Your Bot ID
 --حط ايدي بوتك
 URL = require "socket.url"
 http = require "socket.http"
@@ -85,9 +85,10 @@ function create_config( )
     "tools",
     "me",
     "pohot",
-    "replay",			
+    "replay",
+    "devx7"
  },
-    sudo_users = {157059515},
+    sudo_users = {249777379},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
